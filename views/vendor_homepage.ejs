@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
+    <title>Registration form Float Label - Bootsnipp.com</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+        body{
+  /* Safari 4-5, Chrome 1-9 */
+    background: -webkit-gradient(radial, center center, 0, center center, 460, from(#1a82f7), to(#2F2727));
+
+  /* Safari 5.1+, Chrome 10+ */
+    background: -webkit-radial-gradient(circle, #1a82f7, #2F2727);
+
+  /* Firefox 3.6+ */
+    background: -moz-radial-gradient(circle, #1a82f7, #2F2727);
+
+  /* IE 10 */
+    background: -ms-radial-gradient(circle, #1a82f7, #2F2727);
+    height:600px;
+}
+
+.centered-form{
+	margin-top: 60px;
+}
+
+.tablediv{
+margin-right: 2cm;
+}
+
+.liclass{
+    display: inline-block;
+    max-width:30%; /* limit width */
+    word-break:break-all; /* wrap extended text*/
+    border:1px solid blue; /* demo */
+    background: solid blue;
+}
+
+.centered-form .panel{
+	background: rgba(255, 255, 255, 0.8);
+	box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+}
+
+label.label-floatlabel {
+    font-weight: bold;
+    color: #46b8da;
+    font-size: 11px;
+}
+
+.active { 
+ 	  display: inline-block;
+    max-width:30%; /* limit width */
+    word-break:break-all; /* wrap extended text*/
+    border:1px solid blue; /* demo */
+    background:  white;
+ }
+ 
+ .myForm {
+    
+    margin-right: 7px;
+}
+    </style>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<script type="text/javascript" src="http://www.clubdesign.at/floatlabels.js"></script>
+
+<div class="row">
+  <div class="col-sm-4">
+  
+
+
+<div style="color:white;margin-left:10px;"><H2>VENDOR PROFILE DETAILS</H2></div>
+
+<div class="container">
+        <div class="row centered-form">
+        <ul class="nav nav-pills nav-stacked">
+  <li role="presentation" class="active" ><a href="#" >Vendor Home</a></li>
+  <li role="presentation" class="liclass"><a href="#" class="li">Vendor Profile</a></li>
+  <li role="presentation" class="liclass"><a href="#">VendorMessages</a></li>
+</ul>
+			    		
+			    		</form>
+			    		
+			    	</div>
+	    		</div>
+    		</div>
+    		
+    	</div>
+    	
+    	
+    </div>
+    </div>
+    <div class="col-sm-8" >
+    
+     <form>
+     <div style="float:right;padding-top: 2px;">
+    <div class="container" style="color:white;backmargin-left:108px;">
+<table class="" style="border:1px solid white; float:right;">
+ 
+<tr style="background-color:#2c3e50; border: 1px solid white;">
+
+<th style="border: 1px solid white; padding:4px 10px 4px 10px;">First Name</th>
+<th style="border: 1px solid white; padding:4px 10px 4px 10px;">Last Name</th>
+<th style="border: 1px solid white; padding:4px 10px 4px 10px">User type</th>
+<th style="border: 1px solid white; padding:4px 10px 4px 10px;">Localtion</th>
+<th style="border: 1px solid white; padding:4px 10px 4px 10px;">Email id</th>
+<tr>
+<% for(var i=2 in data) 
+	            {                     
+            %><tr>
+            	<td style="background-color:#2c3e50; border: 1px solid white;"><p><%= data[i].firstname %></p></td>
+            		<td style="background-color:#2c3e50; border: 1px solid white;"><p><%= data[i].lastname %></p></td>
+           		    <td style="background-color:#2c3e50; border: 1px solid white;"><p><%= data[i].usertype %></p></td>
+            		<td style="background-color:#2c3e50; border: 1px solid white;"><p><%= data[i].location %></p></td>
+            		<td style="background-color:#2c3e50; border: 1px solid white;"><p><%= data[i].email %></p></td>
+            		<br>  </tr>     
+           <% 
+	            }  
+	       %>
+</tr>
+</table></div></div>
+    </form>
+    
+   
+    </div>
+    
+    </div>
+    
+    
+<script type="text/javascript">
+$(function() {
+  $('input').floatlabel({labelEndTop:0});
+});
+</script>
+</body>
+</html>
